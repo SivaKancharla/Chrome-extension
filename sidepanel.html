@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="todos-bg-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="todos-heading">Todos</h1>
+            <h1 class="create-task-heading">
+              Create <span class="create-task-heading-subpart">Task</span>
+            </h1>
+            <input type="text" id="todoUserInput" class="todo-user-input" placeholder="What needs to be done?"/>
+            <button class="button col-4" id="addTodoButton">Add</button>
+            <h1 class="todo-items-heading">
+              My Tasks
+            </h1>
+            <ul class="todo-items-container" id="todoItemsContainer">
+            </ul>
+            <button class="button col-4" id="saveTodoButton">Save</button>
+            <script src="script.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

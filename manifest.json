@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Simple To-Do List",
+  "version": "1.0",
+  "description": "A basic Chrome To-Do list extension.",
+  "action": {
+    "default_icon": {
+      "16": "icon/icon16.png",   
+      "32": "icon/icon32.png",   
+      "48": "icon/icon48.png",   
+      "128": "icon/icon128.png"  
+    },
+    "default_title": "To-Do List"
+  },
+  "permissions": ["storage","sidePanel"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
