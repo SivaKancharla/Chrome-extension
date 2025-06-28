@@ -11,6 +11,168 @@ body {
   min-height: 100vh;
 }
 
+.pomodoro-bg-container {
+    background-color: #ffffff;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    padding: 40px; /* Increased padding */
+    margin: 20px;
+    width: 100%;
+    max-width: 450px; /* Adjusted max width for timer */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pomodoro-heading {
+    font-family: 'Bree Serif', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.pomodoro-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Wider underline */
+    height: 5px; /* Thicker underline */
+    background-color: #007bff;
+    border-radius: 3px;
+}
+
+.timer-modes {
+    margin-bottom: 30px;
+}
+
+.mode-button {
+    background-color: #e9ecef; /* Light gray background for modes */
+    color: #495057;
+    border: none;
+    border-radius: 25px; /* Pill-shaped buttons */
+    padding: 10px 20px;
+    margin: 0 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mode-button:hover {
+    background-color: #dee2e6;
+}
+
+.mode-button.active {
+    background-color: #007bff; /* Primary blue for active mode */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.mode-button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle focus glow */
+}
+
+.timer-display {
+    font-family: 'Roboto', sans-serif;
+    font-size: 72px; /* Large, prominent timer display */
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 40px;
+    letter-spacing: 2px; /* Slightly spread out digits */
+    background-color: #f8f9fa; /* Light background for the display */
+    border-radius: 10px;
+    padding: 20px 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+.timer-controls {
+    margin-top: 30px;
+}
+
+.control-button {
+    background-color: #007bff; /* Green for Start button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+#pauseBtn {
+    border: 2px solid;
+    border-color: #0056b3;
+    background-color: white; /* Orange for Pause button */
+    color: black; /* Dark text for contrast */
+}
+#resetBtn {
+    background-color: #dee2e6; /* Red for Reset button */
+}
+
+.control-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#startBtn:hover { background-color: #0056b3; }
+#pauseBtn:hover { background-color: #0056b3; }
+#resetBtn:hover { background-color: black; }
+
+.control-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cycle-info {
+    font-size: 16px;
+    color: #6c757d;
+    margin-top: 25px;
+}
+
+.cycle-info #cyclesCompleted {
+    font-weight: 700;
+    color: #34495e;
+}
+
+/* Responsive adjustments for smaller side panel */
+@media (max-width: 480px) {
+    .pomodoro-bg-container {
+        padding: 30px;
+        margin: 15px;
+    }
+    .pomodoro-heading {
+        font-size: 30px;
+    }
+    .timer-display {
+        font-size: 60px;
+    }
+    .mode-button {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    .control-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 8px;
+    }
+}
+
 .todos-bg-container {
   background-color: #ffffff;
   border-radius: 12px;
