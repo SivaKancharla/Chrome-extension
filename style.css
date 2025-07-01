@@ -10,7 +10,19 @@ body {
   align-items: flex-start;
   min-height: 100vh;
 }
-
+.own{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#searchIcon{
+  text-align: center;
+  align-self: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 7px;
+}
 .pomodoro-bg-container {
     background-color: #ffffff;
     border-radius: 15px; /* More rounded corners */
